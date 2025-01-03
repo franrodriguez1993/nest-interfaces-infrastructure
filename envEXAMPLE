@@ -1,0 +1,13 @@
+PORT = 3000
+
+# ~~~~~~ MY SQL ~~~~~~
+MYSQL_HOST=
+MYSQL_PORT=
+MYSQL_USER=
+MYSQL_PASS=
+MYSQL_BBDD=
+
+
+
+# ~~~~~~ MONGO DB ~~~~~~
+MONGO_URI =
