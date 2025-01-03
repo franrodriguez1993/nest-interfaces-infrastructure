@@ -8,7 +8,7 @@ import { UserDto } from '../dto/user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
 
 @Injectable()
-export class UserMongooseRepository implements IUserRepository {
+export class UserMongoRepository implements IUserRepository {
   constructor(
     @InjectModel(User.name) private readonly userModel: Model<UserDocument>,
   ) {}

@@ -6,7 +6,7 @@ import { UserSQLRepository } from './repository/user-sql.repository';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from '../../database/schemas/user.schema';
-import { UserMongooseRepository } from './repository/user-mongo.repository';
+import { UserMongoRepository } from './repository/user-mongo.repository';
 import { UuidService } from '../../shared/utils/uuid.service';
 
 @Module({
@@ -18,7 +18,7 @@ import { UuidService } from '../../shared/utils/uuid.service';
   controllers: [UsersController],
   providers: [
     UsersService,
-    { provide: 'UserRepository', useClass: UserMongooseRepository },
+    { provide: 'UserRepository', useClass: UserMongoRepository },
     {provide:'IdGenerator',useClass:UuidService}
   ],
 })
